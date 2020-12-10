@@ -18,5 +18,5 @@ add_executable (2D_feature_tracking src/matching2D_Student.cpp src/MidTermProjec
 target_link_libraries (2D_feature_tracking ${OpenCV_LIBRARIES})
 
 # Executable for create matrix exercise
-add_executable (2nd2D_feature_tracking src2/matching2D_Student.cpp src2/MidTermProject_Camera_Student.cpp)
-target_link_libraries (2nd2D_feature_tracking ${OpenCV_LIBRARIES})
+# add_executable (2nd2D_feature_tracking src2/matching2D_Student.cpp src2/MidTermProject_Camera_Student.cpp)
+# target_link_libraries (2nd2D_feature_tracking ${OpenCV_LIBRARIES})

@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/workspace/SFND_2D_Feature_Matching/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -122,19 +122,6 @@ depend:
 2D_feature_tracking/fast:
 	$(MAKE) -f CMakeFiles/2D_feature_tracking.dir/build.make CMakeFiles/2D_feature_tracking.dir/build
 .PHONY : 2D_feature_tracking/fast
-
-#=============================================================================
-# Target rules for targets named 2nd2D_feature_tracking
-
-# Build rule for target.
-2nd2D_feature_tracking: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 2nd2D_feature_tracking
-.PHONY : 2nd2D_feature_tracking
-
-# fast build rule for target.
-2nd2D_feature_tracking/fast:
-	$(MAKE) -f CMakeFiles/2nd2D_feature_tracking.dir/build.make CMakeFiles/2nd2D_feature_tracking.dir/build
-.PHONY : 2nd2D_feature_tracking/fast
 
 src/MidTermProject_Camera_Student.o: src/MidTermProject_Camera_Student.cpp.o
 
@@ -190,82 +177,21 @@ src/matching2D_Student.cpp.s:
 	$(MAKE) -f CMakeFiles/2D_feature_tracking.dir/build.make CMakeFiles/2D_feature_tracking.dir/src/matching2D_Student.cpp.s
 .PHONY : src/matching2D_Student.cpp.s
 
-src2/MidTermProject_Camera_Student.o: src2/MidTermProject_Camera_Student.cpp.o
-
-.PHONY : src2/MidTermProject_Camera_Student.o
-
-# target to build an object file
-src2/MidTermProject_Camera_Student.cpp.o:
-	$(MAKE) -f CMakeFiles/2nd2D_feature_tracking.dir/build.make CMakeFiles/2nd2D_feature_tracking.dir/src2/MidTermProject_Camera_Student.cpp.o
-.PHONY : src2/MidTermProject_Camera_Student.cpp.o
-
-src2/MidTermProject_Camera_Student.i: src2/MidTermProject_Camera_Student.cpp.i
-
-.PHONY : src2/MidTermProject_Camera_Student.i
-
-# target to preprocess a source file
-src2/MidTermProject_Camera_Student.cpp.i:
-	$(MAKE) -f CMakeFiles/2nd2D_feature_tracking.dir/build.make CMakeFiles/2nd2D_feature_tracking.dir/src2/MidTermProject_Camera_Student.cpp.i
-.PHONY : src2/MidTermProject_Camera_Student.cpp.i
-
-src2/MidTermProject_Camera_Student.s: src2/MidTermProject_Camera_Student.cpp.s
-
-.PHONY : src2/MidTermProject_Camera_Student.s
-
-# target to generate assembly for a file
-src2/MidTermProject_Camera_Student.cpp.s:
-	$(MAKE) -f CMakeFiles/2nd2D_feature_tracking.dir/build.make CMakeFiles/2nd2D_feature_tracking.dir/src2/MidTermProject_Camera_Student.cpp.s
-.PHONY : src2/MidTermProject_Camera_Student.cpp.s
-
-src2/matching2D_Student.o: src2/matching2D_Student.cpp.o
-
-.PHONY : src2/matching2D_Student.o
-
-# target to build an object file
-src2/matching2D_Student.cpp.o:
-	$(MAKE) -f CMakeFiles/2nd2D_feature_tracking.dir/build.make CMakeFiles/2nd2D_feature_tracking.dir/src2/matching2D_Student.cpp.o
-.PHONY : src2/matching2D_Student.cpp.o
-
-src2/matching2D_Student.i: src2/matching2D_Student.cpp.i
-
-.PHONY : src2/matching2D_Student.i
-
-# target to preprocess a source file
-src2/matching2D_Student.cpp.i:
-	$(MAKE) -f CMakeFiles/2nd2D_feature_tracking.dir/build.make CMakeFiles/2nd2D_feature_tracking.dir/src2/matching2D_Student.cpp.i
-.PHONY : src2/matching2D_Student.cpp.i
-
-src2/matching2D_Student.s: src2/matching2D_Student.cpp.s
-
-.PHONY : src2/matching2D_Student.s
-
-# target to generate assembly for a file
-src2/matching2D_Student.cpp.s:
-	$(MAKE) -f CMakeFiles/2nd2D_feature_tracking.dir/build.make CMakeFiles/2nd2D_feature_tracking.dir/src2/matching2D_Student.cpp.s
-.PHONY : src2/matching2D_Student.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... 2D_feature_tracking"
-	@echo "... 2nd2D_feature_tracking"
+	@echo "... edit_cache"
 	@echo "... src/MidTermProject_Camera_Student.o"
 	@echo "... src/MidTermProject_Camera_Student.i"
 	@echo "... src/MidTermProject_Camera_Student.s"
 	@echo "... src/matching2D_Student.o"
 	@echo "... src/matching2D_Student.i"
 	@echo "... src/matching2D_Student.s"
-	@echo "... src2/MidTermProject_Camera_Student.o"
-	@echo "... src2/MidTermProject_Camera_Student.i"
-	@echo "... src2/MidTermProject_Camera_Student.s"
-	@echo "... src2/matching2D_Student.o"
-	@echo "... src2/matching2D_Student.i"
-	@echo "... src2/matching2D_Student.s"
 .PHONY : help
 
 

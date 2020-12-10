@@ -50,5 +50,4 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/2D_feature_tracking.dir/DependInfo.cmake"
-  "CMakeFiles/2nd2D_feature_tracking.dir/DependInfo.cmake"
   )
